@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TecHub - Multi-Vendor E-Commerce Platform
 
-## Getting Started
+TecHub is a comprehensive, full-stack multi-vendor e-commerce platform. It empowers independent sellers to list their products while providing a seamless, feature-rich shopping experience for customers.
 
-First, run the development server:
+## 🚀 Features
 
+### For Customers (Buyers)
+* **Browse & Search:** Discover thousands of products with dynamic search and filtering.
+* **Shopping Cart:** Real-time cart management with instant price calculation.
+* **Order Tracking:** Place orders and track their real-time status from "Placed" to "Delivered".
+* **Real-time Chat Portal:** Instantly chat with the specific seller of a product using the floating chat widget on product pages.
+* **Reviews & Ratings:** Leave 1-5 star ratings and written reviews on purchased items once delivered.
+* **Email Notifications:** Receive automated HTML emails for registration, order confirmation, and shipping updates.
+
+### For Sellers
+* **Seller Dashboard:** A dedicated portal to manage your business.
+* **Product Management:** Upload products with rich descriptions and multiple images (powered by Cloudinary).
+* **Order Fulfillment:** View incoming orders and update their status (triggers email alerts to buyers).
+* **Customer Support:** A dedicated Messages inbox to reply to real-time customer inquiries.
+* **Review Management:** Read customer reviews on your products and post official seller replies that show up publicly.
+* **Email Alerts:** Get instant email notifications the moment a customer buys one of your products.
+
+## 💻 Tech Stack
+
+* **Frontend:** Next.js, React, Tailwind CSS
+* **Backend:** Node.js, Express.js
+* **Database:** MongoDB, Mongoose
+* **Authentication:** JWT (JSON Web Tokens), bcryptjs
+* **Storage:** Cloudinary (for image uploads)
+* **Emails:** Nodemailer (for automated transactional emails)
+
+## 🛠️ Installation & Setup
+
+### Prerequisites
+* Node.js installed
+* MongoDB URI
+* Cloudinary Account
+* SMTP credentials (e.g., Gmail App Password)
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/techub-ecommerce.git
+cd techub-ecommerce
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Setup Backend (Server)
+Navigate to the server directory and install dependencies:
+```bash
+cd server
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create a `.env` file in the `server` directory and add your environment variables:
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+NODE_ENV=development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Cloudinary
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
 
-## Learn More
+# Nodemailer SMTP
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_app_password
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the backend server:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Setup Frontend (Client)
+Open a new terminal, navigate to the client directory, and install dependencies:
+```bash
+cd client
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create a `.env.local` file in the `client` directory:
+```env
+NEXT_PUBLIC_BACKEND_URL=http://localhost:5000
+NEXT_PUBLIC_CURRENCY=$
+```
 
-## Deploy on Vercel
+Start the frontend development server:
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4. Open the App
+Visit `http://localhost:3000` in your browser!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+## 📝 License
+This project is open source and available under the [MIT License](LICENSE).
