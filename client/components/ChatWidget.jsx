@@ -83,7 +83,7 @@ const ChatWidget = ({ sellerId, productId }) => {
             
             {/* Chat Box */}
             {isOpen && (
-                <div className="bg-white w-80 sm:w-96 rounded-2xl shadow-2xl border border-gray-100 overflow-hidden mb-4 flex flex-col h-[450px] animate-fade-in-up origin-bottom-right transition-all">
+                <div className="bg-white w-80 sm:w-96 max-w-[calc(100vw-2rem)] rounded-2xl shadow-2xl border border-gray-100 overflow-hidden mb-4 flex flex-col h-[450px] animate-fade-in-up origin-bottom-right transition-all">
                     {/* Header */}
                     <div className="bg-orange-600 p-4 text-white flex justify-between items-center">
                         <div className="flex items-center gap-3">

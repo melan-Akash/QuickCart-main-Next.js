@@ -28,7 +28,8 @@ const Product = () => {
         
         // Fetch Reviews
         try {
-            const { data } = await axios.get(`http://localhost:5000/api/review/product/${id}`);
+            const apiBase = backendUrl || 'http://localhost:5000';
+            const { data } = await axios.get(`${apiBase}/api/review/product/${id}`);
             if (data.success) {
                 setReviews(data.reviews);
             }
