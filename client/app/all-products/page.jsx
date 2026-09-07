@@ -76,7 +76,7 @@ const AllProducts = () => {
                             
                             {searchQuery && (
                                 <p className="text-gray-500 mt-3">
-                                    Showing results for <span className="font-semibold text-gray-800">"{searchQuery}"</span>
+                                    Showing results for <span className="font-semibold text-gray-800">&quot;{searchQuery}&quot;</span>
                                 </p>
                             )}
                         </div>

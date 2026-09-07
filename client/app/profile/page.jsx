@@ -239,7 +239,7 @@ const Profile = () => {
                                             <Image src={assets.box_icon} alt="No orders" className="w-8 h-8 opacity-40" />
                                         </div>
                                         <p className="text-lg font-medium text-gray-800">No orders yet</p>
-                                        <p className="mt-1">Looks like you haven't made your choice yet...</p>
+                                        <p className="mt-1">Looks like you haven&apos;t made your choice yet...</p>
                                         <button onClick={() => router.push('/')} className="mt-4 px-6 py-2 bg-orange-600 text-white rounded-lg font-medium hover:bg-orange-700">Start Shopping</button>
                                     </div>
                                 ) : (
